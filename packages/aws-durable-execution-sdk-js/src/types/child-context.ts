@@ -13,6 +13,8 @@ export interface ChildConfig<T> {
   subType?: string;
   /** Function to generate summaries for large results (used internally by map/parallel) */
   summaryGenerator?: (result: T) => string;
+  /** If true, skip checkpointing and use parent's parentId for child operations */
+  virtualContext?: boolean;
 }
 
 /**
